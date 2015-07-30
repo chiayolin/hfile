@@ -9,18 +9,19 @@ then you might find this shell script useful.
 Installing
 ----------
 
-Clone the repository, `cd` into the repository, then paste that at a terminal prompt:
-
-```sh
-ln -s $(pwd)/hfile /usr/local/bin/hfile
-```
-
-If you have Homebrew installed:
+If you have Homebrew installed on your machine then:
 
 ```sh
 brew tap chiayolin/cask
 brew install hfile
 ```
+
+Else, clone the repository, `cd` into the repository, then paste that at a terminal prompt:
+
+```sh
+ln -s $(pwd)/hfile /usr/local/bin/hfile
+```
+
 
 Usage
 -----
