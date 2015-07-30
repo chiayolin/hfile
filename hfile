@@ -1,0 +1,52 @@
+#!/bin/bash
+#
+# name:
+# hfile v2.0
+#
+# description:
+# show or hide hidden files in Finder on OS X.
+# 
+# author : chiayo.lin@gmail.com
+# date   : JAN. 25, 2015
+# licence: GPL 3.0
+
+CONF="defaults write com.apple.finder AppleShowAllFiles"
+SHOW="$CONF YES"
+HIDE="$CONF NO"
+HELP=("echo use \`$0 help\` for help")
+OKAY=0
+
+if [ "$1" == "show" ] || [ "$1" == "1" ]; then
+  $SHOW
+  OKAY=1
+
+elif [ "$1" == "hide" ] || [ "$1" == "0" ]; then
+  $HIDE
+  OKAY=2
+
+elif [ "$1" == "help" ]; then
+  echo "usage: hfile [options]"
+  echo "options:"
+  echo "  show  show hidden files"
+  echo "  hide  hide hidden files"
+  echo "  help  print this help and usage"
+
+elif [ "$1" == "" ]; then
+  echo "error: missing arg"
+  $HELP
+else 
+  echo "error: invalid option $1"
+  $HELP
+fi
+
+if [ $OKAY -ne 0 ]; then
+  echo "restarting Finder..."
+  killall Finder
+
+  printf "hidden files are now "
+  if [ $OKAY -eq 1 ]; then
+    echo "shown"
+  elif [ $OKAY -eq 2 ]; then
+    echo "hidden"
+  fi
+fi
