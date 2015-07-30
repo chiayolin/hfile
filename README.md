@@ -15,6 +15,12 @@ Clone the repository, `cd` into the repository, then paste that at a terminal pr
 ln -s $(pwd)/hfile /usr/local/bin/hfile
 ```
 
+If you have Homebrew installed:
+
+```sh
+brew tap chiayolin/cask
+brew install hfile
+```
 
 Usage
 -----
