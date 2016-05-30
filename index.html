@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640">
+
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen">
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+    <title>Hfile by chiayolin</title>
+  </head>
+
+  <body>
+    <a id="forkme_banner" href="https://github.com/chiayolin/hfile">View on GitHub</a>
+    <div class="shell">
+
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>Hfile</h1>
+            <h2>:scroll: a shell script to show or hide hidden files in Finder on OS X.</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/chiayolin/hfile/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/chiayolin/hfile/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+        <h1>
+<a id="hfile" class="anchor" href="#hfile" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>hfile</h1>
+
+<p><code>hfile</code> is a shell script that enables you the ability to show or hide hidden files in Finder on OS X. 
+But really, the script itself is just the aliases of <code>defaults write com.apple.finder AppleShowAllFiles
+YES</code> and <code>defaults write com.apple.finder AppleShowAllFiles NO</code>. So if you want to save some key strokes, 
+then you might find this shell script useful.</p>
+
+<h2>
+<a id="installing" class="anchor" href="#installing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installing</h2>
+
+<p>If you have Homebrew installed on your machine then:</p>
+
+<div class="highlight highlight-source-shell"><pre>brew tap chiayolin/cask
+brew install hfile</pre></div>
+
+<p>Else, clone the repository, <code>cd</code> into the repository, then paste that at a terminal prompt:</p>
+
+<div class="highlight highlight-source-shell"><pre>ln -s <span class="pl-s"><span class="pl-pds">$(</span><span class="pl-c1">pwd</span><span class="pl-pds">)</span></span>/hfile /usr/local/bin/hfile</pre></div>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+
+<p><strong>Show</strong> hidden files: </p>
+
+<div class="highlight highlight-source-shell"><pre>$ hfile show</pre></div>
+
+<p><strong>Hide</strong> hidden files:</p>
+
+<div class="highlight highlight-source-shell"><pre>$ hfile hide</pre></div>
+
+<p>You can also use <code>1</code> and <code>0</code> instead of <code>show</code> and <code>hide</code>:</p>
+
+<div class="highlight highlight-source-shell"><pre>$ hfile 1 <span class="pl-c"># this will **show** the hidden files</span></pre></div>
+
+<p>Use the argument <code>help</code> to print help messages.</p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
+
+<p>The code is licensed under the <a href="https://raw.githubusercontent.com/chiayolin/hfile/master/LICENSE">GPL 3.0</a> License. </p>
+      </section>
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/chiayolin">chiayolin</a> can be found on <a href="https://github.com/chiayolin/hfile">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="https://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
